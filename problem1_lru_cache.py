@@ -19,7 +19,7 @@ class LRUCache:
         self.head.next = self.tail
         self.tail.prev = self.head
 
-    # ---------- small helpers (each is O(1)) ----------
+    # small helpers (each is O(1)) 
     def _remove(self, node):
         node.prev.next = node.next
         node.next.prev = node.prev
@@ -30,7 +30,7 @@ class LRUCache:
         self.head.next.prev = node
         self.head.next = node
 
-    # ---------- public operations ----------
+    #  public operations 
     def get(self, key):
         if key not in self.map:
             return -1
